@@ -1,0 +1,117 @@
+<pre>--- Summary ---
+Tests passed: 0 out of 8
+
+--- Details ---
+Test #0: failed 
+Test case description: Wiki example 1
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-01-01 00:00:00
+    end_date: 2010-12-31 00:00:00
+    symbols: ['GOOG', 'AAPL', 'GLD', 'XOM']
+    allocs: [0.2, 0.3, 0.4, 0.1]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: 0.255646784534)
+    avg_daily_ret: 0.001 (expected: 0.000957366234238)
+    sharpe_ratio: 2.1 (expected: 1.51819243641)
+
+Test #1: failed 
+Test case description: Wiki example 2
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-01-01 00:00:00
+    end_date: 2010-12-31 00:00:00
+    symbols: ['AXP', 'HPQ', 'IBM', 'HNZ']
+    allocs: [0.0, 0.0, 0.0, 1.0]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: 0.198105963655)
+    avg_daily_ret: 0.001 (expected: 0.000763106152672)
+    sharpe_ratio: 2.1 (expected: 1.30798398744)
+
+Test #2: failed 
+Test case description: Wiki example 3: Six month range
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-06-01 00:00:00
+    end_date: 2010-12-31 00:00:00
+    symbols: ['GOOG', 'AAPL', 'GLD', 'XOM']
+    allocs: [0.2, 0.3, 0.4, 0.1]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: 0.205113938792)
+    avg_daily_ret: 0.001 (expected: 0.00129586924366)
+    sharpe_ratio: 2.1 (expected: 2.21259766672)
+
+Test #3: failed 
+Test case description: Normalization check
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-01-01 00:00:00
+    end_date: 2013-05-31 00:00:00
+    symbols: ['AXP', 'HPQ', 'IBM', 'GOOG']
+    allocs: [0.3, 0.5, 0.1, 0.1]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: -0.110888530433)
+    avg_daily_ret: 0.001 (expected: -6.50814806831e-05)
+    sharpe_ratio: 2.1 (expected: -0.0704694718385)
+
+Test #4: failed 
+Test case description: One month range
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-01-01 00:00:00
+    end_date: 2010-01-31 00:00:00
+    symbols: ['AXP', 'HPQ', 'IBM', 'GOOG']
+    allocs: [0.9, 0.0, 0.1, 0.0]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: -0.0758725033871)
+    avg_daily_ret: 0.001 (expected: -0.00411578300489)
+    sharpe_ratio: 2.1 (expected: -2.84503813366)
+
+Test #5: failed 
+Test case description: Low Sharpe ratio
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2011-01-01 00:00:00
+    end_date: 2011-12-31 00:00:00
+    symbols: ['WFR', 'ANR', 'MWW', 'FSLR']
+    allocs: [0.25, 0.25, 0.25, 0.25]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: -0.686004563165)
+    avg_daily_ret: 0.001 (expected: -0.00405018240566)
+    sharpe_ratio: 2.1 (expected: -1.93664660013)
+
+Test #6: failed 
+Test case description: All your eggs in one basket
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2010-01-01 00:00:00
+    end_date: 2010-12-31 00:00:00
+    symbols: ['AXP', 'HPQ', 'IBM', 'HNZ']
+    allocs: [0.0, 1.0, 0.0, 0.0]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: -0.191620333598)
+    avg_daily_ret: 0.001 (expected: -0.000718040989619)
+    sharpe_ratio: 2.1 (expected: -0.71237182415)
+
+Test #7: failed 
+Test case description: Two year range
+IncorrectOutput: One or more stats were incorrect.
+  Inputs:
+    start_date: 2006-01-03 00:00:00
+    end_date: 2008-01-02 00:00:00
+    symbols: ['MMM', 'MO', 'MSFT', 'INTC']
+    allocs: [0.0, 0.9, 0.1, 0.0]
+    start_val: 1000000
+  Wrong values:
+    cum_ret: 0.25 (expected: 0.43732715979)
+    avg_daily_ret: 0.001 (expected: 0.00076948918955)
+    sharpe_ratio: 2.1 (expected: 1.26449481371)
+
+</pre>
